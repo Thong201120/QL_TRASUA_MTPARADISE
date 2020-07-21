@@ -6,7 +6,7 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
-
+//Lop provider
 namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
 {
     public class DataProvider
