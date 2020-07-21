@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="inhoadon" targetNamespace="http://tempuri.org/inhoadon.xsd" xmlns:mstns="http://tempuri.org/inhoadon.xsd" xmlns="http://tempuri.org/inhoadon.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QL_TRASUAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QL_TRASUAConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QL_TRASUA_MTPARADISE.Properties.Settings.GlobalReference.Default.QL_TRASUAConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QL_TRASUAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DRINKTABLE.tablename, BILLINFO.id, DRINK.drinkname, DRINK.price, BILLINFO.count, BILLDRINKS.timecheckin, BILLDRINKS.timecheckout, BILLDRINKS.giamgia, BILLDRINKS.TongTien
+FROM     BILLDRINKS INNER JOIN
+                  BILLINFO ON BILLDRINKS.id = BILLINFO.idbill INNER JOIN
+                  DRINK ON BILLINFO.iddrink = DRINK.id INNER JOIN
+                  DRINKTABLE ON BILLDRINKS.idtable = DRINKTABLE.id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="tablename" DataSetColumn="tablename" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="drinkname" DataSetColumn="drinkname" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+              <Mapping SourceColumn="count" DataSetColumn="count" />
+              <Mapping SourceColumn="timecheckin" DataSetColumn="timecheckin" />
+              <Mapping SourceColumn="timecheckout" DataSetColumn="timecheckout" />
+              <Mapping SourceColumn="giamgia" DataSetColumn="giamgia" />
+              <Mapping SourceColumn="TongTien" DataSetColumn="TongTien" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="inhoadon" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="inhoadon" msprop:Generator_UserDSName="inhoadon">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tablename" msprop:Generator_ColumnVarNameInTable="columntablename" msprop:Generator_ColumnPropNameInRow="tablename" msprop:Generator_ColumnPropNameInTable="tablenameColumn" msprop:Generator_UserColumnName="tablename">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="drinkname" msprop:Generator_ColumnVarNameInTable="columndrinkname" msprop:Generator_ColumnPropNameInRow="drinkname" msprop:Generator_ColumnPropNameInTable="drinknameColumn" msprop:Generator_UserColumnName="drinkname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:double" />
+              <xs:element name="count" msprop:Generator_ColumnVarNameInTable="columncount" msprop:Generator_ColumnPropNameInRow="count" msprop:Generator_ColumnPropNameInTable="countColumn" msprop:Generator_UserColumnName="count" type="xs:int" />
+              <xs:element name="timecheckin" msprop:Generator_ColumnVarNameInTable="columntimecheckin" msprop:Generator_ColumnPropNameInRow="timecheckin" msprop:Generator_ColumnPropNameInTable="timecheckinColumn" msprop:Generator_UserColumnName="timecheckin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="timecheckout" msprop:Generator_ColumnVarNameInTable="columntimecheckout" msprop:Generator_ColumnPropNameInRow="timecheckout" msprop:Generator_ColumnPropNameInTable="timecheckoutColumn" msprop:Generator_UserColumnName="timecheckout" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="giamgia" msprop:Generator_ColumnVarNameInTable="columngiamgia" msprop:Generator_ColumnPropNameInRow="giamgia" msprop:Generator_ColumnPropNameInTable="giamgiaColumn" msprop:Generator_UserColumnName="giamgia" type="xs:int" minOccurs="0" />
+              <xs:element name="TongTien" msprop:Generator_ColumnVarNameInTable="columnTongTien" msprop:Generator_ColumnPropNameInRow="TongTien" msprop:Generator_ColumnPropNameInTable="TongTienColumn" msprop:Generator_UserColumnName="TongTien" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
