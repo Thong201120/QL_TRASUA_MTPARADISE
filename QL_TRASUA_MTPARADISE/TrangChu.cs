@@ -192,6 +192,11 @@ namespace QL_TRASUA_MTPARADISE
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             Table table = lsvBill.Tag as Table;
+            if (table == null)
+            {
+                MessageBox.Show("Bàn còn trống\n\nkhông có thức uống nào để thanh toán!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             int idbill = BillDrinksDAO.Instance.GetUnCheckBillIDByTableID(table.Id);
             int giamgia = (int)nuGiamGia.Value;
             double thanhtoan = Convert.ToDouble(txtTotalPrice.Text.Split(',')[0]);

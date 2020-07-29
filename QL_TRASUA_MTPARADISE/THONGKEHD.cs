@@ -34,6 +34,7 @@ namespace QL_TRASUA_MTPARADISE
         void LoadThongkeDanhSachHD(DateTime timecheckin, DateTime timeckeckout)
         {
             dgvBill.DataSource = BillDrinksDAO.Instance.THONGKEHOADON(timecheckin, timeckeckout);
+            dgvKetQuaTK.DataSource = BillDrinksDAO.Instance.TONGTIENTHEOTHOIGIAN(timecheckin, timeckeckout);
         }
 
 

@@ -55,6 +55,11 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
             return DataProvider.Instance.ExecuteQuery("exec THONGKEHOADON @timecheckin , @timecheckout", new object[] { timecheckin, timecheckout});
         }
 
+        public DataTable TONGTIENTHEOTHOIGIAN(DateTime timecheckin, DateTime timecheckout)
+        {
+            return DataProvider.Instance.ExecuteQuery("exec TONGTIENTHEOTHOIGIAN @timecheckin , @timecheckout", new object[] { timecheckin, timecheckout });
+        }
+
         public DateTime LAYGIOVAO(int idtable)
         {
             try
