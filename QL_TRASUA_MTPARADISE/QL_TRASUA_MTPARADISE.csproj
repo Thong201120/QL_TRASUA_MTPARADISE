@@ -70,6 +70,11 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Datasetinthongke.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datasetinthongke.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data_Access_Obj\AccountDAO.cs" />
     <Compile Include="Data_Access_Obj\BillDrinksDAO.cs" />
     <Compile Include="Data_Access_Obj\BillInfoDAO.cs" />
@@ -124,15 +129,30 @@
     <Compile Include="frmTAIKHOAN.Designer.cs">
       <DependentUpon>frmTAIKHOAN.cs</DependentUpon>
     </Compile>
+    <Compile Include="inhoadon.cs">
+      <DependentUpon>inhoadon.xsd</DependentUpon>
+    </Compile>
     <Compile Include="inhoadon.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>inhoadon.xsd</DependentUpon>
     </Compile>
+    <Compile Include="INTHONGKE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INTHONGKE.Designer.cs">
+      <DependentUpon>INTHONGKE.cs</DependentUpon>
+    </Compile>
     <Compile Include="rptInHoaDon.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptInHoaDon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptInThongKe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInThongKe.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="THONGKEHD.cs">
@@ -185,6 +205,9 @@
     <EmbeddedResource Include="frmTHUCUONG.resx">
       <DependentUpon>frmTHUCUONG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="INTHONGKE.resx">
+      <DependentUpon>INTHONGKE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptInHoaDon.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptInHoaDon.cs</LastGenOutput>
@@ -203,6 +226,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptInThongKe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInThongKe.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="THONGKEHD.resx">
       <DependentUpon>THONGKEHD.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +239,17 @@
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Datasetinthongke.xsc">
+      <DependentUpon>Datasetinthongke.xsd</DependentUpon>
+    </None>
+    <None Include="Datasetinthongke.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datasetinthongke.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasetinthongke.xss">
+      <DependentUpon>Datasetinthongke.xsd</DependentUpon>
+    </None>
     <None Include="inhoadon.xsc">
       <DependentUpon>inhoadon.xsd</DependentUpon>
     </None>

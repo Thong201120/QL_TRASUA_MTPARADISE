@@ -84,5 +84,13 @@ namespace QL_TRASUA_MTPARADISE
             dtPDenNgay.Value = new DateTime(homnay.Year, 12, 31);
             LoadThongkeDanhSachHD(dtPTuNgay.Value, dtPDenNgay.Value);
         }
+
+        private void btnInThongKe_Click(object sender, EventArgs e)
+        {
+            INTHONGKE f = new INTHONGKE();
+            f.Timecheckin = Convert.ToDateTime(dtPTuNgay.Value).ToString("yyyy-MM-dd 00:00:00");
+            f.Timecheckout = Convert.ToDateTime(dtPDenNgay.Value).ToString("yyyy-MM-dd 23:59:59");
+            f.ShowDialog();
+        }
     }
 }

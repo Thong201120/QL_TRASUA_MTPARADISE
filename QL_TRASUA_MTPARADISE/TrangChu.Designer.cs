@@ -213,6 +213,7 @@
             this.txtTimeCheckin.ForeColor = System.Drawing.Color.Maroon;
             this.txtTimeCheckin.Name = "txtTimeCheckin";
             this.txtTimeCheckin.ReadOnly = true;
+            this.txtTimeCheckin.TextChanged += new System.EventHandler(this.txtTimeCheckin_TextChanged);
             // 
             // panel10
             // 

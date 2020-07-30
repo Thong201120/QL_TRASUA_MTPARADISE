@@ -45,6 +45,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.dgvKetQuaTK = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnInThongKe = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKetQuaTK)).BeginInit();
@@ -52,6 +53,7 @@
             // 
             // dtPTuNgay
             // 
+            this.dtPTuNgay.CustomFormat = "yyyy-MM-dd";
             this.dtPTuNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtPTuNgay.Location = new System.Drawing.Point(26, 28);
             this.dtPTuNgay.Name = "dtPTuNgay";
@@ -153,7 +155,7 @@
             this.btnXemTatCa.ForeColor = System.Drawing.Color.White;
             this.btnXemTatCa.Location = new System.Drawing.Point(12, 824);
             this.btnXemTatCa.Name = "btnXemTatCa";
-            this.btnXemTatCa.Size = new System.Drawing.Size(758, 43);
+            this.btnXemTatCa.Size = new System.Drawing.Size(566, 43);
             this.btnXemTatCa.TabIndex = 6;
             this.btnXemTatCa.Text = "Xem Tất Cả Doanh Thu";
             this.btnXemTatCa.UseVisualStyleBackColor = false;
@@ -236,12 +238,24 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "THỐNG KÊ";
             // 
+            // btnInThongKe
+            // 
+            this.btnInThongKe.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnInThongKe.Location = new System.Drawing.Point(591, 824);
+            this.btnInThongKe.Name = "btnInThongKe";
+            this.btnInThongKe.Size = new System.Drawing.Size(179, 43);
+            this.btnInThongKe.TabIndex = 12;
+            this.btnInThongKe.Text = "IN HÓA ĐƠN";
+            this.btnInThongKe.UseVisualStyleBackColor = false;
+            this.btnInThongKe.Click += new System.EventHandler(this.btnInThongKe_Click);
+            // 
             // frmQuanLiThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(778, 867);
+            this.ClientSize = new System.Drawing.Size(778, 870);
+            this.Controls.Add(this.btnInThongKe);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvKetQuaTK);
             this.Controls.Add(this.button4);
@@ -284,5 +298,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dgvKetQuaTK;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnInThongKe;
     }
 }

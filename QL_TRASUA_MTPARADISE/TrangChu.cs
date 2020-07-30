@@ -109,7 +109,7 @@ namespace QL_TRASUA_MTPARADISE
                 TotalPrice += item.Tongtien;
 
                 lsvBill.Items.Add(lsvItem);
-                txtTimeCheckin.Text = BillDrinksDAO.Instance.LAYGIOVAO(id).ToString();
+                txtTimeCheckin.Text = BillDrinksDAO.Instance.LAYGIOVAO(id).ToString("yyyy-MM-dd HH:mm:ss.fff");
 
             }
             txtTotalPrice.Text = TotalPrice.ToString();
@@ -360,6 +360,11 @@ namespace QL_TRASUA_MTPARADISE
         }
 
         private void flpTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtTimeCheckin_TextChanged(object sender, EventArgs e)
         {
 
         }

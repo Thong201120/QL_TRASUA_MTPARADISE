@@ -13,6 +13,7 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
     {
         private static DataProvider instance; //đóng gói ctrl + R + E
         //Giải thích thuật toán: tạo một static Dataprovider để có thể dùng trong toàn bộ chương trình khi có nhiều bảng dữ liệu đổ vào các datagridview, phương pháp này là design patnern singleton
+
         public static DataProvider Instance
         {
             get {if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
