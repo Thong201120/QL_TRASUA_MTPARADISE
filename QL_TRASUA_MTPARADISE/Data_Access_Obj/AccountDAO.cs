@@ -19,9 +19,9 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
         private AccountDAO() {}
         public bool login(string username, string password)
         {
+            //Thực hiện store procedure
             string query = "DANGNHAP @username , @password";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] {username, password});
-
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password });
             return result.Rows.Count>0;
         }
     }

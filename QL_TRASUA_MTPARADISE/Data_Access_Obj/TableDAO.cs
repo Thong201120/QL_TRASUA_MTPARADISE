@@ -11,28 +11,34 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
 {
     class TableDAO
     {
-        private static TableDAO instance;
-
+        private static TableDAO instance; //Đóng gói tableDAO
         public static TableDAO Instance 
         { 
             get { if (instance == null) instance = new TableDAO(); return TableDAO.instance; }
             private set { TableDAO.instance = value; }    
         }
-        public static int TableWidth = 150;
-        public static int TableHeight = 150;
 
+        //Hàm dựng tránh sự xâm nhập từ bên ngoài
         private TableDAO() {}
 
+        //Chuyển bàn này sang bàn khác 
         public void HOANVIBAN(int temp1, int temp2)
         {
             DataProvider.Instance.ExecuteQuery("LAYBANG_ID @IDBANGOC , @IDBANDITHEO ", new object[] { temp1, temp2 });
         }
 
+        public void GOPBAN(int temp1, int temp2)
+        {
+            DataProvider.Instance.ExecuteQuery("GOPBAN @FIRSTBILL , @SECONDBILL", new object[] { temp1, temp2 });
+        }
+
+        //Lấy thông tin danh sách bàn
         public List<Table> loadTableList()
         {
-            List<Table> tablelist = new List<Table>();
+            List<Table> tablelist = new List<Table>(); //Khai báo list datatable
             DataTable data = DataProvider.Instance.ExecuteQuery("dbo.GetTableList");
            
+            //Với mỗi dòng data lấy được sẽ thêm vào trong list tablelist
             foreach (DataRow item in data.Rows)
             {
                 Table table = new Table(item);
@@ -41,6 +47,7 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
             return tablelist;
         }
 
+        //Lấy thông tin danh sách bàn, tương tự như trên nhưng dùng câu select bình thường
         public List<Table> loadDANHSACHBANUONG()
         {
             List<Table> DSBAN = new List<Table>();
@@ -55,6 +62,7 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
             return DSBAN;
         }
 
+        //Dành cho form quản lí bàn uống
         public bool ThemBanfrmBANUONG(string tablename)
         {
             string query = string.Format("INSERT DBO.DRINKTABLE (tablename) VALUES (N'{0}')", tablename);
@@ -80,3 +88,4 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
         }
     }
 }
+

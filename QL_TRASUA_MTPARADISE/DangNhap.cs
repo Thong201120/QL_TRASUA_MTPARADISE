@@ -23,13 +23,18 @@ namespace QL_TRASUA_MTPARADISE
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-           if (login(username, password))
+           if (login(username, password)) //true
             {
                 TaiKhoan taikhoan = TaiKhoanDAO.Instance.LayTaiKhoangBangUserName(username);
                 fTrangChu f = new fTrangChu(taikhoan);
-                this.Hide();
+                this.Hide(); //Ẩn form đăng nhập và hiển thị form trang chủ lên
                 f.ShowDialog();
                 this.Show();
+
+                /*Sự khác biệt giữa show và show dialog
+                 Show sẽ hiển thị form lên và tiếp tục chạy các câu lệnh tiếp theo nó
+                 Show dialog sẽ hiển thị form lên đồng thời ngưng chạy các câu lệnh tiếp theo cho đến khi tắt form
+                 */
             }
            else
             {
@@ -39,7 +44,7 @@ namespace QL_TRASUA_MTPARADISE
 
         bool login(string username, string password)
         {   
-            return  AccountDAO.Instance.login(username, password);
+            return  AccountDAO.Instance.login(username, password); //trả về true hoặc false
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -47,11 +52,12 @@ namespace QL_TRASUA_MTPARADISE
             this.Close();
         }
 
+        //event xác nhận trước khi đóng form đăng nhập
         private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn chắc chắn muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != System.Windows.Forms.DialogResult.OK)
             {
-                e.Cancel = true;
+                e.Cancel = true; 
             }
         }
 

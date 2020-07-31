@@ -72,8 +72,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbChuyenBan = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -213,7 +211,6 @@
             this.txtTimeCheckin.ForeColor = System.Drawing.Color.Maroon;
             this.txtTimeCheckin.Name = "txtTimeCheckin";
             this.txtTimeCheckin.ReadOnly = true;
-            this.txtTimeCheckin.TextChanged += new System.EventHandler(this.txtTimeCheckin_TextChanged);
             // 
             // panel10
             // 
@@ -303,7 +300,6 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Name = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // nuSoLuong
             // 
@@ -319,7 +315,6 @@
             0,
             0,
             0});
-            this.nuSoLuong.ValueChanged += new System.EventHandler(this.nuSoLuong_ValueChanged);
             // 
             // btnChonMon
             // 
@@ -344,7 +339,6 @@
             this.cbDanhSachMon.ForeColor = System.Drawing.Color.Teal;
             this.cbDanhSachMon.FormattingEnabled = true;
             this.cbDanhSachMon.Name = "cbDanhSachMon";
-            this.cbDanhSachMon.SelectedIndexChanged += new System.EventHandler(this.cbDanhSachMon_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -384,7 +378,6 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.MintCream;
             this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // btnThanhToan
             // 
@@ -428,7 +421,6 @@
             this.label1.BackColor = System.Drawing.Color.SeaGreen;
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cbChuyenBan
             // 
@@ -444,18 +436,6 @@
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.DarkSlateGray;
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.Name = "panel4";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.DarkSlateGray;
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
             // 
             // panel8
             // 
@@ -483,8 +463,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.MintCream;
             this.panel3.Controls.Add(this.panel8);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.cbChuyenBan);
             this.panel3.Controls.Add(this.label1);
@@ -495,7 +473,6 @@
             this.panel3.Controls.Add(this.btnThanhToan);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnChuyenBan
             // 
@@ -511,7 +488,6 @@
             resources.ApplyResources(this.flpTable, "flpTable");
             this.flpTable.BackColor = System.Drawing.Color.MintCream;
             this.flpTable.Name = "flpTable";
-            this.flpTable.Paint += new System.Windows.Forms.PaintEventHandler(this.flpTable_Paint);
             // 
             // fTrangChu
             // 
@@ -589,8 +565,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cbChuyenBan;
         private System.Windows.Forms.Label label1;
