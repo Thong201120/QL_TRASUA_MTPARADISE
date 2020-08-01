@@ -40,7 +40,7 @@ namespace QL_TRASUA_MTPARADISE
             }
         }
         
-
+        //Hiển thị các thông tin của thức uống từ Datagridview sang các textbox, cbbox
         void BINGDINGthemmon()
         {
             txtTenThucUong.DataBindings.Add(new Binding("Text", dgvDrink.DataSource, "drinkname",true, DataSourceUpdateMode.Never));
@@ -80,19 +80,22 @@ namespace QL_TRASUA_MTPARADISE
                 MessageBox.Show("Hãy Nhập Vào Gì Đó!!!", "Thông báo");
         }
 
+        //Hàm thay đổi tên danh mục thức uống theo thức uống được chọn
         private void txtDThucUong_TextChanged(object sender, EventArgs e)
         {
-            try
+            try // nếu như không có kết quả nào được trả về thì sẽ hiển thị gridview rỗng
             {
+                //Nếu cột đang chọn lớn hơn 0 và dữ liệu tại cột đầu tiên của hàng đang chọn id danh mục khác null
                 if (dgvDrink.SelectedCells.Count > 0 && dgvDrink.SelectedCells[0].OwningRow.Cells["iddrinklist"].Value != null)
                 {
-                    int id = (int)dgvDrink.SelectedCells[0].OwningRow.Cells["iddrinklist"].Value;
+                    int id = (int)dgvDrink.SelectedCells[0].OwningRow.Cells["iddrinklist"].Value; //Lấy ra id danh mục của hàng này
+                    //Lấy ra tên danh mục bằng id 
                     DANHMUCTHUCUONG DMTU = DANHMUCTHUCUONGDAO.Instance.LAYTENDANHMUCBANGID(id);
-                    cbDanhMuc.SelectedItem = DMTU;
+                    cbDanhMuc.SelectedItem = DMTU; 
 
                     int index = -1;
                     int i = 0;
-                    foreach (DANHMUCTHUCUONG item in cbDanhMuc.Items)
+                    foreach (DANHMUCTHUCUONG item in cbDanhMuc.Items) //gán id  cho từng danh mục để hiển loại danh mục cho thức uống
                     {
                         if (item.Id == DMTU.Id)
                         {
@@ -104,7 +107,7 @@ namespace QL_TRASUA_MTPARADISE
                     cbDanhMuc.SelectedIndex = index;
                 }
             }
-            catch { MessageBox.Show("Không tìm thấy món này rồi!!!:((");}           
+            catch {  return; }           
         }
 
         private void btnThemDSTU_Click(object sender, EventArgs e)
@@ -112,19 +115,17 @@ namespace QL_TRASUA_MTPARADISE
             string drinkname = txtTenThucUong.Text;
             int iddrinklist = (cbDanhMuc.SelectedItem as DANHMUCTHUCUONG).Id;
             float price = (float)nuDonGia.Value;
-
-            if (THUCUONGDAO.Instance.ThemMonfrTHUCUONG(drinkname, iddrinklist, price))
+            if (MessageBox.Show("Bạn có chắc muốn thêm thức uống này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Thêm món thành công!!!", "Thông báo");
-                LoadDSThucUong();
-                if (themthucuong != null)
+                if (THUCUONGDAO.Instance.ThemMonfrTHUCUONG(drinkname, iddrinklist, price))
                 {
-                    themthucuong(this, new EventArgs());
+                    MessageBox.Show("Thêm món thành công!!!", "Thông báo");
+                    LoadDSThucUong();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Lỗi Khi Thêm! Kiểm Tra Lại!!", "Thông báo");
+                else
+                {
+                    MessageBox.Show("Lỗi Khi Thêm! Kiểm Tra Lại!!", "Thông báo");
+                }
             }
         }
 
@@ -134,62 +135,36 @@ namespace QL_TRASUA_MTPARADISE
             int iddrinklist = (cbDanhMuc.SelectedItem as DANHMUCTHUCUONG).Id;
             float price = (float)nuDonGia.Value;
             int id = Convert.ToInt32(txtDThucUong.Text);
-
-            if (THUCUONGDAO.Instance.CapNhatfrTHUCUONG(id, drinkname, iddrinklist, price))
+            if (MessageBox.Show("Bạn có chắc muốn cập nhật thức uống này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Cập nhật món thành công!!!", "Thông báo");
-                LoadDSThucUong();
-                if (capnhatthucuong != null)
+                if (THUCUONGDAO.Instance.CapNhatfrTHUCUONG(id, drinkname, iddrinklist, price))
                 {
-                    capnhatthucuong(this, new EventArgs());
+                    MessageBox.Show("Cập nhật món thành công!!!", "Thông báo");
+                    LoadDSThucUong();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Lỗi Cập Nhật! Kiểm Tra Lại!!", "Thông báo");
+                else
+                {
+                    MessageBox.Show("Lỗi Cập Nhật! Kiểm Tra Lại!!", "Thông báo");
+                }
             }
         }
 
         private void btnXoaDSTU_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtDThucUong.Text);
-
-            if (THUCUONGDAO.Instance.XoafrTHUCUONG(id))
+            if (MessageBox.Show("Bạn có chắc muốn xóa thức uống này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Xóa món thành công!!!", "Thông báo");
-                LoadDSThucUong();
-                if (xoathucuong != null)
+                if (THUCUONGDAO.Instance.XoafrTHUCUONG(id))
                 {
-                    xoathucuong(this, new EventArgs());
+                    MessageBox.Show("Xóa món thành công!!!", "Thông báo");
+                    LoadDSThucUong();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi Khi Xóa! Kiểm Tra Lại!!", "Thông báo");
                 }
             }
-            else
-            {
-                MessageBox.Show("Lỗi Khi Xóa! Kiểm Tra Lại!!", "Thông báo");
-            }
         }
-
-        private event EventHandler themthucuong;
-        public event EventHandler Themthucuong
-        {
-            add { themthucuong += value; }
-            remove {themthucuong -= value; }
-        }
-
-        private event EventHandler capnhatthucuong;
-        public event EventHandler Capnhatthucuong
-        {
-            add { capnhatthucuong += value; }
-            remove { capnhatthucuong -= value; }
-        }
-
-        private event EventHandler xoathucuong;
-        public event EventHandler Xoathucuong
-        {
-            add { xoathucuong += value; }
-            remove { xoathucuong -= value; }
-        }
-
         private void frmTHUCUONG_Load(object sender, EventArgs e)
         {
 

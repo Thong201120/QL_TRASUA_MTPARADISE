@@ -51,19 +51,22 @@ namespace QL_TRASUA_MTPARADISE
         {
             if (dangnhapTK.Username.Equals(username))
             {
-                MessageBox.Show("Sao Lại Xóa Chính Mình Vậy?????");
+                MessageBox.Show("Bạn đang xóa tài khoản của chính mình đó?????");
                 return;
             }
-            if (TaiKhoanDAO.Instance.XoafrTaiKhoan(username))
+            if (MessageBox.Show("Bạn có chắc muốn xóa tài khoản này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Xóa Tài Khoản Thành Công");
-            }
+                if (TaiKhoanDAO.Instance.XoafrTaiKhoan(username))
+                {
+                    MessageBox.Show("Xóa Tài Khoản Thành Công");
+                }
 
-            else
-            {
-                MessageBox.Show("Xóa Tài Khoản Thất bại!!!");
+                else
+                {
+                    MessageBox.Show("Xóa Tài Khoản Thất bại!!!");
+                }
+                HienThiDanhSachTK();
             }
-            HienThiDanhSachTK();
         }
 
         private void btnXoaTK_Click(object sender, EventArgs e)
@@ -74,16 +77,19 @@ namespace QL_TRASUA_MTPARADISE
 
         void SuaTK (string username, string displayName ,int type, string cmnd, string sodienthoai, string diachi)
         {
-            if (TaiKhoanDAO.Instance.CapNhatfrTaiKhoan(username, displayName, type, cmnd, sodienthoai, diachi))
+            if (MessageBox.Show("Bạn có chắc muốn cập nhật tài khoản này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Sửa Tài Khoản Thành Công");
-            }
+                if (TaiKhoanDAO.Instance.CapNhatfrTaiKhoan(username, displayName, type, cmnd, sodienthoai, diachi))
+                {
+                    MessageBox.Show("Sửa Tài Khoản Thành Công");
+                }
 
-            else
-            {
-                MessageBox.Show("Sửa Tài Khoản Thất bại!!!");
+                else
+                {
+                    MessageBox.Show("Sửa Tài Khoản Thất bại!!!");
+                }
+                HienThiDanhSachTK();
             }
-            HienThiDanhSachTK();
         }
 
         private void btnSuaTK_Click(object sender, EventArgs e)
@@ -101,16 +107,19 @@ namespace QL_TRASUA_MTPARADISE
 
         void ThemTK(string username, string displayName, int type, string cmnd, string sodienthoai, string diachi)
         {
-            if(TaiKhoanDAO.Instance.ThemTKfrTaiKhoan(username, displayName, type, cmnd, sodienthoai, diachi))
+            if (MessageBox.Show("Bạn có chắc muốn thêm tài khoản này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Thêm Tài Khoản Thành Công");
-            }
+                if (TaiKhoanDAO.Instance.ThemTKfrTaiKhoan(username, displayName, type, cmnd, sodienthoai, diachi))
+                {
+                    MessageBox.Show("Thêm Tài Khoản Thành Công");
+                }
 
-            else
-            {
-                MessageBox.Show("Thêm Tài Khoản Thất bại!!!");
+                else
+                {
+                    MessageBox.Show("Thêm Tài Khoản Thất bại!!!");
+                }
+                HienThiDanhSachTK();
             }
-            HienThiDanhSachTK();
         }
         private void btnThemTK_Click(object sender, EventArgs e)
         {
@@ -126,16 +135,19 @@ namespace QL_TRASUA_MTPARADISE
 
         void DatlaiMK(string username)
         {
-            if (TaiKhoanDAO.Instance.DatLaiMatKhau(username))
+            if (MessageBox.Show("Bạn có chắc muốn đặt lại mật khẩu của tài khoản này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Đặt Lại Mật Khẩu Thành Công");
-            }
+                if (TaiKhoanDAO.Instance.DatLaiMatKhau(username))
+                {
+                    MessageBox.Show("Đặt Lại Mật Khẩu Thành Công");
+                }
 
-            else
-            {
-                MessageBox.Show("Đặt Lại Mật Khẩu Thất bại!!!");
+                else
+                {
+                    MessageBox.Show("Đặt Lại Mật Khẩu Thất bại!!!");
+                }
+                HienThiDanhSachTK();
             }
-            HienThiDanhSachTK();
         }
 
         private void btnDatLaiMatKhau_Click(object sender, EventArgs e)

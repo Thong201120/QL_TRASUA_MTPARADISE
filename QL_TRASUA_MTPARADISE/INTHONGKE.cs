@@ -21,7 +21,11 @@ namespace QL_TRASUA_MTPARADISE
         {
             InitializeComponent();
         }
+
+        //Tạo một chuổi connection string để kết nối xuống cơ sở dữ liệu
         public string cnn = "Data Source=LAPTOP-DJ9J9KHA\\SQLEXPRESS;Initial Catalog=QL_TRASUA;Integrated Security=True";
+
+        //Khai báo hai biến để nhận tham số đầu vào
         public string Timecheckin;
         public string Timecheckout;
 
@@ -34,17 +38,19 @@ namespace QL_TRASUA_MTPARADISE
                 " BILLINFO ON BILLDRINKS.id = BILLINFO.idbill" +
                 " WHERE timecheckin >= '" + Timecheckin + "' and timecheckout <= '" + Timecheckout + 
                 "' and billstatus = 1";
+            //Thực thi câu truy vấn
             SqlDataAdapter da = new SqlDataAdapter(query, cnn);
 
             try
             {
+                //Khởi tạo một bảng mới để đổ dữ liệu từ da va
                 DataTable tblInThongKe = new DataTable();
                 da.Fill(tblInThongKe);
+
+                //Khởi tạo cửa sổ
                 rptInThongKe rpt = new rptInThongKe();
               
-
-                //rpt.SetParameterValue("Parameter_NgayBatDau", "Mệt mỏi");
-                //rpt.SetParameterValue("Parameter_NgayKetThuc", "Quá mệt mỏi");
+                //Lấy dữ liệu từ bảng vào trong report in
                 rpt.SetDataSource(tblInThongKe);
                 crvINTHONGKE.ReportSource = rpt;
             }

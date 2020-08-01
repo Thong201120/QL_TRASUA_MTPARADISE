@@ -38,7 +38,20 @@ namespace QL_TRASUA_MTPARADISE
             }
            else
             {
-                MessageBox.Show("Sai Tên Tài Khoản Hoặc Mật Khẩu!!!", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (txtPassword.Text == "" || txtUsername.Text == "")
+                {
+                    if (txtUsername.Text == "")
+                    {
+                        MessageBox.Show("Vui lòng nhập vào tên đăng nhập!!!", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    }
+                    else if (txtPassword.Text == "")
+                    {
+                        MessageBox.Show("Vui lòng nhập vào mật khẩu!!!", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                    MessageBox.Show("Sai Tên Tài Khoản Hoặc Mật Khẩu!!!", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+
             }
         }
 

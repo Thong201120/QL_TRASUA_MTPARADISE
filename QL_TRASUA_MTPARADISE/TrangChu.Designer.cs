@@ -71,7 +71,7 @@
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbChuyenBan = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnThanhToanvaIn = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -428,14 +428,14 @@
             resources.ApplyResources(this.cbChuyenBan, "cbChuyenBan");
             this.cbChuyenBan.Name = "cbChuyenBan";
             // 
-            // button2
+            // btnThanhToanvaIn
             // 
-            this.button2.BackColor = System.Drawing.Color.Teal;
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnThanhToanvaIn.BackColor = System.Drawing.Color.Teal;
+            resources.ApplyResources(this.btnThanhToanvaIn, "btnThanhToanvaIn");
+            this.btnThanhToanvaIn.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnThanhToanvaIn.Name = "btnThanhToanvaIn";
+            this.btnThanhToanvaIn.UseVisualStyleBackColor = false;
+            this.btnThanhToanvaIn.Click += new System.EventHandler(this.btnThanhToanvaIn_Click);
             // 
             // panel8
             // 
@@ -463,7 +463,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.MintCream;
             this.panel3.Controls.Add(this.panel8);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnThanhToanvaIn);
             this.panel3.Controls.Add(this.cbChuyenBan);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txtTotalPrice);
@@ -565,7 +565,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnThanhToanvaIn;
         private System.Windows.Forms.ComboBox cbChuyenBan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTotalPrice;

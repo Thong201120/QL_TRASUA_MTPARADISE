@@ -9,6 +9,7 @@ namespace QL_TRASUA_MTPARADISE.Data_Transfer_Obj
 {
     public class BILLDRINKS
     {
+        //Dấu chấm hỏi cho phép lữu trữ với giá trị NULL
         public BILLDRINKS(int id, DateTime? timecheckin, DateTime? timecheckout, int billstatus, int idtable, int giamgia = 0)
         {
             this.Idtable = idtable;

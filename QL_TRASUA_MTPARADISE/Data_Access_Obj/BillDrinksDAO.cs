@@ -60,6 +60,7 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
             return DataProvider.Instance.ExecuteQuery("exec TONGTIENTHEOTHOIGIAN @timecheckin , @timecheckout", new object[] { timecheckin, timecheckout });
         }
 
+        //Lấy thông tin về thời gian checkin
         public DateTime LAYGIOVAO(int idtable)
         {
             try
@@ -73,7 +74,7 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
             
          }
 
-
+        //Dùng khi in có hóa đơn, muốn lấy ra các giá trị từ các cột trước khi hóa đơn đợc thanh toán
         public void PRINTBEFORECHECKOUT(int id, int giamgia, float TongTien)
         {
             string query = "UPDATE dbo.BILLDRINKS SET billstatus = 0, timecheckout = getdate(), " + " giamgia =" + giamgia + " ,TongTien=" + TongTien + " where id = " + id;
@@ -81,6 +82,7 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
 
         }
 
+        //Lấy thời gian check out khỏi quán
         public void CHECKOUT(int id, int giamgia, float TongTien)
         {
             string query = "UPDATE dbo.BILLDRINKS SET billstatus = 1, timecheckout = getdate(), " + " giamgia ="+ giamgia + " ,TongTien=" + TongTien + " where id = " + id;

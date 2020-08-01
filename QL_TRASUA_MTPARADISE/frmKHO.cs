@@ -38,41 +38,50 @@ namespace QL_TRASUA_MTPARADISE
 
         void THEMSTOCK(string stuffname, int stuffamount, int stuffprice)
         {
-            if(KHODAO.Instance.ThemNLfrmKHO(stuffname, stuffamount, stuffprice))
+            if (MessageBox.Show("Bạn có chắc muốn thêm nguyên liệu này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Thêm nguyên liệu thành công!!!!");
+                if (KHODAO.Instance.ThemNLfrmKHO(stuffname, stuffamount, stuffprice))
+                {
+                    MessageBox.Show("Thêm nguyên liệu thành công!!!!");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm nguyên liệu thất bại!!!");
+                }
+                Loaddanhsachnguyenlieu();
             }
-            else
-            {
-                MessageBox.Show("Thêm nguyên liệu thất bại!!!");
-            }
-            Loaddanhsachnguyenlieu();
         }
 
         void CAPNHATSTOCK(int id, string stuffname, int stuffamount, int stuffprice)
         {
-            if (KHODAO.Instance.CapNhatNLfrmKHO(id, stuffname, stuffamount, stuffprice))
+            if (MessageBox.Show("Bạn có chắc muốn cập nhật nguyên liệu này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Cập nhật nguyên liệu thành công!!!!");
+                if (KHODAO.Instance.CapNhatNLfrmKHO(id, stuffname, stuffamount, stuffprice))
+                {
+                    MessageBox.Show("Cập nhật nguyên liệu thành công!!!!");
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật nguyên liệu thất bại!!!");
+                }
+                Loaddanhsachnguyenlieu();
             }
-            else
-            {
-                MessageBox.Show("Cập nhật nguyên liệu thất bại!!!");
-            }
-            Loaddanhsachnguyenlieu();
         }
 
         void XOASTOCK(string stuffname)
         {
-            if (KHODAO.Instance.XoaNLfrmKHO(stuffname))
+            if (MessageBox.Show("Bạn có chắc muốn xóa nguyên liệu này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Xóa nguyên liệu thành công!!!!");
+                if (KHODAO.Instance.XoaNLfrmKHO(stuffname))
+                {
+                    MessageBox.Show("Xóa nguyên liệu thành công!!!!");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa nguyên liệu thất bại!!!");
+                }
+                Loaddanhsachnguyenlieu();
             }
-            else
-            {
-                MessageBox.Show("Xóa nguyên liệu thất bại!!!");
-            }
-            Loaddanhsachnguyenlieu();
         }
 
    

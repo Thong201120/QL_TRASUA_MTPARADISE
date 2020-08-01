@@ -52,7 +52,7 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
 
         public bool ThemTKfrTaiKhoan(string username, string displayName, int type, string cmnd, string sodienthoai, string diachi)
         {
-            string query = string.Format("INSERT dbo.ACCOUNT ( username, displayName, typeuser, cmnd, sodienthoai, diachi)VALUES ( N'{0}', N'{1}', {2}, N'{3}', N'{4}', N'{5}')", username, displayName, type, cmnd, sodienthoai, diachi);
+            string query = string.Format("INSERT dbo.ACCOUNT ( username, displayName, typeuser, cmnd, sodienthoai, diachi) VALUES ( N'{0}', N'{1}', {2}, N'{3}', N'{4}', N'{5}')", username, displayName, type, cmnd, sodienthoai, diachi);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;

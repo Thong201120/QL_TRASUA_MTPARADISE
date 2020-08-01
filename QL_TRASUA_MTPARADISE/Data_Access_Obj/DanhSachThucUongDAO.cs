@@ -20,6 +20,7 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
 
         private DanhSachThucUongDAO() { }
 
+        //Danh sách thức uống này đã được tính thành tiền dùng cho form thống kê hóa đơn
         public List<DanhSachThucUong> GetDanhSachThucUong(int id)
         {
             List<DanhSachThucUong> listdanhsach = new List<DanhSachThucUong>();

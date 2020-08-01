@@ -30,6 +30,8 @@ namespace QL_TRASUA_MTPARADISE
                 ChuyenTrangThai(taiKhoanuser);
             }
         }
+
+        //Lấy và hiển thị thông tin tài khoản đang truy cập hiện thời
         void ChuyenTrangThai(TaiKhoan TK)
         {
             txtTenDangNhap.Text = taiKhoanuser.Username;
@@ -39,6 +41,7 @@ namespace QL_TRASUA_MTPARADISE
             txtDiachi.Text = taiKhoanuser.Diachi;
         }
 
+        //Cập nhật lại tài khoản
         void CapNhatTaiKhoan()
         {
             string displayName = txtTenHienThi.Text;
@@ -50,46 +53,41 @@ namespace QL_TRASUA_MTPARADISE
             string reeternewpass = txtMatKhauMoi.Text;
             string username = txtTenDangNhap.Text;
 
-            if (!passwordmoi.Equals(reeternewpass))
+            //Kiểm tra xem mật khẩu cũ và mật khẩu mới có trùng với nhau không
+            if (txtMatKhauMoi.Text != txtNhapLaiPass.Text)
             {
                 MessageBox.Show("Mật khẩu mới nhập lại không trùng khớp!! Hãy nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            //Nếu đã trùng thì tiếp tục kiểm tra
             else
             {
+                //Nếu mật khẩu đúng
                 if (TaiKhoanDAO.Instance.CheckCapNhatTaiKhoan(username, displayName, userpassword, passwordmoi, cmnd, sodienthoai, diachi))
                 {
                     MessageBox.Show("Cập nhật thành công!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.None);
-                    if (capnhatlaitentk != null)
-                        capnhatlaitentk(this, new TaiKhoanEvent(TaiKhoanDAO.Instance.LayTaiKhoangBangUserName(username)));
                 }
+                //Nếu mật khẩu không đúng
                 else
                 {
-                    MessageBox.Show("Sai mật khẩu. Hãy kiểm tra lại!!!!");
+                    //Nếu chưa mật mật khẩu hay mật khẩu rỗng
+                    if (txtMatKhau.Text == "")
+                    {
+                        MessageBox.Show("Nhập vào mật khẩu!!!!");
+                    }
+                    //Còn lại thì chỉ có thể là sai mật khẩu thôi:))
+                    else
+                    {
+                        MessageBox.Show("Sai mật khẩu. Hãy kiểm tra lại!!!!");
+                    }
                 }
             }
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            CapNhatTaiKhoan();
-        }
-
-        private event EventHandler<TaiKhoanEvent> capnhatlaitentk;
-        public event EventHandler<TaiKhoanEvent> Capnhatlaitentk
-        {
-            add { capnhatlaitentk += value; }
-            remove { capnhatlaitentk -= value; }
-        }
-
-        public class TaiKhoanEvent:EventArgs
-        {
-            private TaiKhoan TK;
-
-            public TaiKhoan TK1 { get => TK; set => TK = value; }
-
-            public TaiKhoanEvent(TaiKhoan TK)
+            if (MessageBox.Show("Bạn có chắc muốn cập nhật lại thông tin không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                this.TK1 = TK;
+                CapNhatTaiKhoan();
             }
         }
 

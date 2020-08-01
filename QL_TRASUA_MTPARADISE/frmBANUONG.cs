@@ -36,41 +36,50 @@ namespace QL_TRASUA_MTPARADISE
 
         void THEMBAN(string tablename)
         {
-            if(TableDAO.Instance.ThemBanfrmBANUONG(tablename))
+            if (MessageBox.Show("Bạn có chắc muốn thêm bàn này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Làm người đi!!!!!");
+                if (TableDAO.Instance.ThemBanfrmBANUONG(tablename))
+                {
+                    MessageBox.Show("Thêm Bàn Thành Công!!!!");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm Bàn Thất Bại!!!!");
+                }
+                LoadDanhSachBanUong();
             }
-            else
-            {
-                MessageBox.Show("Thêm Bàn Thành Công!!!!");
-            }
-            LoadDanhSachBanUong();
         }
 
         void CAPNHATBAN(string tablename, int id)
         {
-            if (TableDAO.Instance.CapNhatfrmBanuong(tablename, id))
+            if (MessageBox.Show("Bạn có chắc muốn cập nhật bàn này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Sửa bàn uống thành công!!!");
+                if (TableDAO.Instance.CapNhatfrmBanuong(tablename, id))
+                {
+                    MessageBox.Show("Sửa bàn uống thành công!!!");
+                }
+                else
+                {
+                    MessageBox.Show("Sửa bàn uống thất bại!!!");
+                }
+                LoadDanhSachBanUong();
             }
-            else
-            {
-                MessageBox.Show("Sửa bàn uống thất bại!!!");
-            }
-            LoadDanhSachBanUong();
         }
 
         void XOABAN(string tablename)
         {
-            if(TableDAO.Instance.XoafrmBanuong(tablename))
+            if (MessageBox.Show("Bạn có chắc muốn xóa bàn này không?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("Xóa bàn uống thành công!!!");
+                if (TableDAO.Instance.XoafrmBanuong(tablename))
+                {
+                    MessageBox.Show("Xóa bàn uống thành công!!!");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa bàn uống thất bại!!!");
+                }
+                LoadDanhSachBanUong();
             }
-            else
-            {
-                MessageBox.Show("Xóa bàn uống thất bại!!!");
-            }
-            LoadDanhSachBanUong();
         }
 
         private void btnThemBan_Click(object sender, EventArgs e)
