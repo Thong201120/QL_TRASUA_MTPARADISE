@@ -251,7 +251,7 @@ namespace QL_TRASUA_MTPARADISE
             double thanhtoan = Convert.ToDouble(txtTotalPrice.Text.Split(',')[0]);
             double tongtiendagiamgia = thanhtoan - (thanhtoan / 100) * giamgia;
             if (idbill != -1)
-            {
+            { 
                 if (MessageBox.Show(string.Format("Bạn có chắc chắn muốn thanh toán cho {0} không?\n\nGiảm Giá: {1}%\n\n Tổng Tiền: {2}", table.Tablename, giamgia, tongtiendagiamgia), "Xác Nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.OK)
                 {
                     //Khởi tạo cửa in hóa đơn

@@ -56,28 +56,23 @@ namespace QL_TRASUA_MTPARADISE
             //Kiểm tra xem mật khẩu cũ và mật khẩu mới có trùng với nhau không
             if (txtMatKhauMoi.Text != txtNhapLaiPass.Text)
             {
-                MessageBox.Show("Mật khẩu mới nhập lại không trùng khớp!! Hãy nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập lại mật khẩu đúng với mật khẩu mới!");
             }
-            //Nếu đã trùng thì tiếp tục kiểm tra
             else
             {
-                //Nếu mật khẩu đúng
                 if (TaiKhoanDAO.Instance.CheckCapNhatTaiKhoan(username, displayName, userpassword, passwordmoi, cmnd, sodienthoai, diachi))
                 {
-                    MessageBox.Show("Cập nhật thành công!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    MessageBox.Show("Cập nhật thành công!!!");
                 }
-                //Nếu mật khẩu không đúng
                 else
                 {
-                    //Nếu chưa mật mật khẩu hay mật khẩu rỗng
                     if (txtMatKhau.Text == "")
                     {
-                        MessageBox.Show("Nhập vào mật khẩu!!!!");
+                        MessageBox.Show("Hãy điền vào mật khẩu");
                     }
-                    //Còn lại thì chỉ có thể là sai mật khẩu thôi:))
                     else
                     {
-                        MessageBox.Show("Sai mật khẩu. Hãy kiểm tra lại!!!!");
+                        MessageBox.Show("Vui lòng điền đúng mật khẩu!!!");
                     }
                 }
             }

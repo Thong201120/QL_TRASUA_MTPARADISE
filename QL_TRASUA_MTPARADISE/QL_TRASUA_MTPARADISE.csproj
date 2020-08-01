@@ -358,5 +358,32 @@
   <ItemGroup>
     <None Include="Resources\chuadatCHOT.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thongke.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanli.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanli2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ban.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accountgroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thongtin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kho2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

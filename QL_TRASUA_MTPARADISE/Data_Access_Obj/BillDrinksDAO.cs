@@ -60,7 +60,7 @@ namespace QL_TRASUA_MTPARADISE.Data_Access_Obj
             return DataProvider.Instance.ExecuteQuery("exec TONGTIENTHEOTHOIGIAN @timecheckin , @timecheckout", new object[] { timecheckin, timecheckout });
         }
 
-        //Lấy thông tin về thời gian checkin
+        //Lấy thông tin về thời gian checkin.
         public DateTime LAYGIOVAO(int idtable)
         {
             try
