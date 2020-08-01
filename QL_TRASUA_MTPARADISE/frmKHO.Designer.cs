@@ -359,8 +359,10 @@
             this.Controls.Add(this.panel21);
             this.Controls.Add(this.panel22);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmKHO";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí Kho";
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();

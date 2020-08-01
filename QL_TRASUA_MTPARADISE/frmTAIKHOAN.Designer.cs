@@ -435,8 +435,10 @@
             this.Controls.Add(this.panel29);
             this.Controls.Add(this.panel30);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmTAIKHOAN";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÍ TÀI KHOẢN";
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();

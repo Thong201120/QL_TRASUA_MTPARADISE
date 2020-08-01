@@ -386,6 +386,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmTHUCUONG";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí thức uống";
             this.Load += new System.EventHandler(this.frmTHUCUONG_Load);
             this.cbHienThiDanhMuc.ResumeLayout(false);

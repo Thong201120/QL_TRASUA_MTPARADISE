@@ -30,6 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTrangChu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.aDMINISTRATORToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmsQL_Thuc_Don = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmsiDanhMuc = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiThucUong = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmBanUong = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmQL_Kho = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmsTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmThongTinTK = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmsGioiThieu = new System.Windows.Forms.ToolStripMenuItem();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -53,6 +62,7 @@
             this.cbDanhSachMon = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateNavigator1 = new DevExpress.XtraScheduler.DateNavigator();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnThanhToan = new System.Windows.Forms.Button();
@@ -68,16 +78,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnChuyenBan = new System.Windows.Forms.Button();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.tmsGioiThieu = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmThongTinTK = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmsTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmQL_Kho = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmBanUong = new System.Windows.Forms.ToolStripMenuItem();
-            this.aDMINISTRATORToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmsQL_Thuc_Don = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmsiDanhMuc = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiThucUong = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -89,11 +89,11 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuGiamGia)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -111,6 +111,76 @@
             this.tmsGioiThieu});
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            // 
+            // aDMINISTRATORToolStripMenuItem
+            // 
+            this.aDMINISTRATORToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.aDMINISTRATORToolStripMenuItem.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.thongke;
+            this.aDMINISTRATORToolStripMenuItem.Name = "aDMINISTRATORToolStripMenuItem";
+            resources.ApplyResources(this.aDMINISTRATORToolStripMenuItem, "aDMINISTRATORToolStripMenuItem");
+            this.aDMINISTRATORToolStripMenuItem.Click += new System.EventHandler(this.aDMINISTRATORToolStripMenuItem_Click);
+            // 
+            // tmsQL_Thuc_Don
+            // 
+            this.tmsQL_Thuc_Don.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tmsiDanhMuc,
+            this.tsmiThucUong});
+            this.tmsQL_Thuc_Don.ForeColor = System.Drawing.Color.White;
+            this.tmsQL_Thuc_Don.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.quanli2;
+            this.tmsQL_Thuc_Don.Name = "tmsQL_Thuc_Don";
+            resources.ApplyResources(this.tmsQL_Thuc_Don, "tmsQL_Thuc_Don");
+            // 
+            // tmsiDanhMuc
+            // 
+            this.tmsiDanhMuc.Name = "tmsiDanhMuc";
+            resources.ApplyResources(this.tmsiDanhMuc, "tmsiDanhMuc");
+            this.tmsiDanhMuc.Click += new System.EventHandler(this.tmsiDanhMuc_Click);
+            // 
+            // tsmiThucUong
+            // 
+            this.tsmiThucUong.Name = "tsmiThucUong";
+            resources.ApplyResources(this.tsmiThucUong, "tsmiThucUong");
+            this.tsmiThucUong.Click += new System.EventHandler(this.tsmiThucUong_Click);
+            // 
+            // tsmBanUong
+            // 
+            this.tsmBanUong.ForeColor = System.Drawing.Color.White;
+            this.tsmBanUong.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.ban;
+            this.tsmBanUong.Name = "tsmBanUong";
+            resources.ApplyResources(this.tsmBanUong, "tsmBanUong");
+            this.tsmBanUong.Click += new System.EventHandler(this.tsmBanUong_Click);
+            // 
+            // tsmQL_Kho
+            // 
+            this.tsmQL_Kho.ForeColor = System.Drawing.Color.White;
+            this.tsmQL_Kho.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.kho2;
+            this.tsmQL_Kho.Name = "tsmQL_Kho";
+            resources.ApplyResources(this.tsmQL_Kho, "tsmQL_Kho");
+            this.tsmQL_Kho.Click += new System.EventHandler(this.tsmQL_Kho_Click);
+            // 
+            // tmsTaiKhoan
+            // 
+            this.tmsTaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.tmsTaiKhoan.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.accountgroup;
+            this.tmsTaiKhoan.Name = "tmsTaiKhoan";
+            resources.ApplyResources(this.tmsTaiKhoan, "tmsTaiKhoan");
+            this.tmsTaiKhoan.Click += new System.EventHandler(this.tmsTaiKhoan_Click);
+            // 
+            // tsmThongTinTK
+            // 
+            this.tsmThongTinTK.ForeColor = System.Drawing.SystemColors.Window;
+            this.tsmThongTinTK.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.account;
+            this.tsmThongTinTK.Name = "tsmThongTinTK";
+            resources.ApplyResources(this.tsmThongTinTK, "tsmThongTinTK");
+            this.tsmThongTinTK.Click += new System.EventHandler(this.tsmThongTinTK_Click);
+            // 
+            // tmsGioiThieu
+            // 
+            this.tmsGioiThieu.ForeColor = System.Drawing.Color.White;
+            this.tmsGioiThieu.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.thongtin;
+            this.tmsGioiThieu.Name = "tmsGioiThieu";
+            resources.ApplyResources(this.tmsGioiThieu, "tmsGioiThieu");
+            this.tmsGioiThieu.Click += new System.EventHandler(this.tmsGioiThieu_Click);
             // 
             // eventLog1
             // 
@@ -295,6 +365,13 @@
             resources.ApplyResources(this.dateNavigator1, "dateNavigator1");
             this.dateNavigator1.Name = "dateNavigator1";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
@@ -418,83 +495,6 @@
             this.flpTable.BackColor = System.Drawing.Color.MintCream;
             this.flpTable.Name = "flpTable";
             // 
-            // tmsGioiThieu
-            // 
-            this.tmsGioiThieu.ForeColor = System.Drawing.Color.White;
-            this.tmsGioiThieu.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.thongtin;
-            this.tmsGioiThieu.Name = "tmsGioiThieu";
-            resources.ApplyResources(this.tmsGioiThieu, "tmsGioiThieu");
-            this.tmsGioiThieu.Click += new System.EventHandler(this.tmsGioiThieu_Click);
-            // 
-            // tsmThongTinTK
-            // 
-            this.tsmThongTinTK.ForeColor = System.Drawing.SystemColors.Window;
-            this.tsmThongTinTK.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.account;
-            this.tsmThongTinTK.Name = "tsmThongTinTK";
-            resources.ApplyResources(this.tsmThongTinTK, "tsmThongTinTK");
-            this.tsmThongTinTK.Click += new System.EventHandler(this.tsmThongTinTK_Click);
-            // 
-            // tmsTaiKhoan
-            // 
-            this.tmsTaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.tmsTaiKhoan.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.accountgroup;
-            this.tmsTaiKhoan.Name = "tmsTaiKhoan";
-            resources.ApplyResources(this.tmsTaiKhoan, "tmsTaiKhoan");
-            this.tmsTaiKhoan.Click += new System.EventHandler(this.tmsTaiKhoan_Click);
-            // 
-            // tsmQL_Kho
-            // 
-            this.tsmQL_Kho.ForeColor = System.Drawing.Color.White;
-            this.tsmQL_Kho.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.kho2;
-            this.tsmQL_Kho.Name = "tsmQL_Kho";
-            resources.ApplyResources(this.tsmQL_Kho, "tsmQL_Kho");
-            this.tsmQL_Kho.Click += new System.EventHandler(this.tsmQL_Kho_Click);
-            // 
-            // tsmBanUong
-            // 
-            this.tsmBanUong.ForeColor = System.Drawing.Color.White;
-            this.tsmBanUong.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.ban;
-            this.tsmBanUong.Name = "tsmBanUong";
-            resources.ApplyResources(this.tsmBanUong, "tsmBanUong");
-            this.tsmBanUong.Click += new System.EventHandler(this.tsmBanUong_Click);
-            // 
-            // aDMINISTRATORToolStripMenuItem
-            // 
-            this.aDMINISTRATORToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.aDMINISTRATORToolStripMenuItem.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.thongke;
-            this.aDMINISTRATORToolStripMenuItem.Name = "aDMINISTRATORToolStripMenuItem";
-            resources.ApplyResources(this.aDMINISTRATORToolStripMenuItem, "aDMINISTRATORToolStripMenuItem");
-            this.aDMINISTRATORToolStripMenuItem.Click += new System.EventHandler(this.aDMINISTRATORToolStripMenuItem_Click);
-            // 
-            // tmsQL_Thuc_Don
-            // 
-            this.tmsQL_Thuc_Don.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmsiDanhMuc,
-            this.tsmiThucUong});
-            this.tmsQL_Thuc_Don.ForeColor = System.Drawing.Color.White;
-            this.tmsQL_Thuc_Don.Image = global::QL_TRASUA_MTPARADISE.Properties.Resources.quanli2;
-            this.tmsQL_Thuc_Don.Name = "tmsQL_Thuc_Don";
-            resources.ApplyResources(this.tmsQL_Thuc_Don, "tmsQL_Thuc_Don");
-            // 
-            // tmsiDanhMuc
-            // 
-            this.tmsiDanhMuc.Name = "tmsiDanhMuc";
-            resources.ApplyResources(this.tmsiDanhMuc, "tmsiDanhMuc");
-            this.tmsiDanhMuc.Click += new System.EventHandler(this.tmsiDanhMuc_Click);
-            // 
-            // tsmiThucUong
-            // 
-            this.tsmiThucUong.Name = "tsmiThucUong";
-            resources.ApplyResources(this.tsmiThucUong, "tsmiThucUong");
-            this.tsmiThucUong.Click += new System.EventHandler(this.tsmiThucUong_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // fTrangChu
             // 
             resources.ApplyResources(this, "$this");
@@ -505,6 +505,7 @@
             this.Controls.Add(this.flpTable);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "fTrangChu";
             this.Load += new System.EventHandler(this.fTrangChu_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -523,13 +524,13 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nuGiamGia)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

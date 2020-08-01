@@ -291,7 +291,9 @@
             this.ClientSize = new System.Drawing.Size(536, 637);
             this.Controls.Add(this.panel21);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmBANUONG";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí bàn";
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();

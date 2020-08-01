@@ -88,7 +88,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dtPDenNgay);
             this.panel1.Controls.Add(this.dtPTuNgay);
-            this.panel1.Location = new System.Drawing.Point(12, 702);
+            this.panel1.Location = new System.Drawing.Point(12, 676);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(758, 67);
             this.panel1.TabIndex = 2;
@@ -127,7 +127,7 @@
             this.dgvBill.Name = "dgvBill";
             this.dgvBill.RowHeadersWidth = 51;
             this.dgvBill.RowTemplate.Height = 24;
-            this.dgvBill.Size = new System.Drawing.Size(758, 536);
+            this.dgvBill.Size = new System.Drawing.Size(758, 505);
             this.dgvBill.TabIndex = 3;
             // 
             // label4
@@ -153,7 +153,7 @@
             this.btnXemTatCa.BackColor = System.Drawing.Color.Crimson;
             this.btnXemTatCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemTatCa.ForeColor = System.Drawing.Color.White;
-            this.btnXemTatCa.Location = new System.Drawing.Point(12, 824);
+            this.btnXemTatCa.Location = new System.Drawing.Point(12, 798);
             this.btnXemTatCa.Name = "btnXemTatCa";
             this.btnXemTatCa.Size = new System.Drawing.Size(566, 43);
             this.btnXemTatCa.TabIndex = 6;
@@ -166,7 +166,7 @@
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(12, 775);
+            this.button1.Location = new System.Drawing.Point(12, 749);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(179, 43);
             this.button1.TabIndex = 7;
@@ -179,7 +179,7 @@
             this.button2.BackColor = System.Drawing.Color.SeaGreen;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(204, 776);
+            this.button2.Location = new System.Drawing.Point(204, 750);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(179, 43);
             this.button2.TabIndex = 8;
@@ -192,7 +192,7 @@
             this.button3.BackColor = System.Drawing.Color.SeaGreen;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(399, 776);
+            this.button3.Location = new System.Drawing.Point(399, 750);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(179, 43);
             this.button3.TabIndex = 9;
@@ -205,7 +205,7 @@
             this.button4.BackColor = System.Drawing.Color.SeaGreen;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(591, 776);
+            this.button4.Location = new System.Drawing.Point(591, 750);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(179, 43);
             this.button4.TabIndex = 10;
@@ -219,7 +219,7 @@
             this.dgvKetQuaTK.BackgroundColor = System.Drawing.Color.Turquoise;
             this.dgvKetQuaTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvKetQuaTK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKetQuaTK.Location = new System.Drawing.Point(12, 638);
+            this.dgvKetQuaTK.Location = new System.Drawing.Point(12, 613);
             this.dgvKetQuaTK.Name = "dgvKetQuaTK";
             this.dgvKetQuaTK.RowHeadersWidth = 51;
             this.dgvKetQuaTK.RowTemplate.Height = 24;
@@ -230,18 +230,18 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.MintCream;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(351, 611);
+            this.label3.Location = new System.Drawing.Point(333, 580);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 17);
+            this.label3.Size = new System.Drawing.Size(117, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "THỐNG KÊ";
             // 
             // btnInThongKe
             // 
             this.btnInThongKe.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnInThongKe.Location = new System.Drawing.Point(591, 824);
+            this.btnInThongKe.Location = new System.Drawing.Point(591, 798);
             this.btnInThongKe.Name = "btnInThongKe";
             this.btnInThongKe.Size = new System.Drawing.Size(179, 43);
             this.btnInThongKe.TabIndex = 12;
@@ -254,7 +254,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(778, 870);
+            this.ClientSize = new System.Drawing.Size(778, 863);
             this.Controls.Add(this.btnInThongKe);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvKetQuaTK);
@@ -268,6 +268,7 @@
             this.Controls.Add(this.dgvBill);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmQuanLiThongKe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÍ THỐNG KÊ";
